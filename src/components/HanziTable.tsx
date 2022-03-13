@@ -1,9 +1,34 @@
+import { useState } from 'react';
+import { HanziObject } from '../types/HanziObject';
 import { useFetch } from '../utils/useFetch';
+import { HanziDetailModal } from './HanziDetailModal';
 import { HanziTile } from './HanziTile';
 import { LoadingSpinner } from './LoadingSpinner';
 
 export function HanziTable() {
   const { isLoading, data, isError } = useFetch('database.json');
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedHanzi, setSelectedHanzi] = useState<HanziObject | undefined>(
+    undefined
+  );
+
+  /**
+   * the method to open the modal and set a message into it (success or failure)
+   */
+  const openModal = (hanzi: HanziObject): void => {
+    setSelectedHanzi(hanzi);
+    setIsModalOpen(true);
+  };
+
+  /**
+   * the method to close the modal and reset the message
+   */
+  const closeModal = (): void => {
+    setSelectedHanzi(undefined);
+    setIsModalOpen(false);
+  };
+
   return (
     <main className="w-full py-4">
       {isLoading ? (
@@ -13,10 +38,15 @@ export function HanziTable() {
       ) : (
         <ul className="first-child grid grid-cols-8 gap-4 mx-auto">
           {data?.map((hanzi) => (
-            <HanziTile key={hanzi.id} hanzi={hanzi} />
+            <HanziTile key={hanzi.id} hanzi={hanzi} handleClick={openModal} />
           ))}
         </ul>
       )}
+      <HanziDetailModal
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+        selectedHanzi={selectedHanzi}
+      />
     </main>
   );
 }

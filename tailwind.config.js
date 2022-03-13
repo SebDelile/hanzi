@@ -15,6 +15,10 @@ module.exports = {
         hanzi: ['Kaiti', 'Noto Serif SC', 'sans-serif'],
         hanziClassic: ['Noto Serif SC', 'sans-serif'],
       },
+      fontSize: {
+        '10xl': '12rem',
+        '11xl': '16rem',
+      },
     },
   },
   plugins: [],

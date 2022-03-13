@@ -12,7 +12,8 @@ module.exports = {
       },
       fontFamily: {
         body: ['DM sans', 'sans-serif'],
-        hanzi: ['Kaiti', 'Noto sans SC'],
+        hanzi: ['Kaiti', 'Noto Serif SC', 'sans-serif'],
+        hanziClassic: ['Noto Serif SC', 'sans-serif'],
       },
     },
   },

@@ -5,10 +5,14 @@
   font-family: 'Kaiti';
   src: local('Kaiti'), url(./fonts/simkai.ttf) format('ttf');
 }
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Noto+Serif+SC&display=swap');
 
 @tailwind utilities;
 
 #root {
   @apply bg-gray-200 text-gray-800 font-body min-h-screen w-full overflow-hidden flex flex-col justify-start items-center;
+}
+
+.first-child {
+  @apply mx-auto px-8 2xl:container;
 }

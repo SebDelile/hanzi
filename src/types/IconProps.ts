@@ -1,3 +1,3 @@
-export type iconProps = {
+export type IconProps = {
   className?: string;
 };

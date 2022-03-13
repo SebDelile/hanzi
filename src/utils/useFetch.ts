@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { hanziObject } from '../types/hanziObject';
+import { HanziObject } from '../types/HanziObject';
 
 /**
  * Custom hook to fetch an API and store the response in an object
  * Fetch is within useEffect so it reload for each change in url or method
  */
 export function useFetch(url: string, method: string = 'GET') {
-  const [data, setData] = useState<hanziObject[] | undefined>(undefined);
+  const [data, setData] = useState<HanziObject[] | undefined>(undefined);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
 
@@ -16,7 +16,7 @@ export function useFetch(url: string, method: string = 'GET') {
     async function fetchData() {
       try {
         const response = await fetch(url, { method: method });
-        const json: hanziObject[] = await response.json();
+        const json: HanziObject[] = await response.json();
         setData(json);
       } catch (err) {
         setError(true);

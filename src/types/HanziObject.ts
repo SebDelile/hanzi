@@ -1,4 +1,4 @@
-export type hanziObject = {
+export type HanziObject = {
   id: number;
   code: string;
   sinogram: string;

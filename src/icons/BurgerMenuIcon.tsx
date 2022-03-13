@@ -1,6 +1,6 @@
-import { iconProps } from '../types/iconProps';
+import { IconProps } from '../types/IconProps';
 
-export function BurgerMenuIcon({ className }: iconProps): React.ReactElement {
+export function BurgerMenuIcon({ className }: IconProps): React.ReactElement {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1, 
+    "id": 1,
     "code": "6211",
     "sinogram": "我",
     "key": "戈",
@@ -12,7 +12,7 @@
     "examplePinyin": "wo3 ai4 ni3"
   },
   {
-    "id": 2, 
+    "id": 2,
     "code": "4F60",
     "sinogram": "你",
     "key": "亻",
@@ -24,7 +24,7 @@
     "examplePinyin": "wo3 ai4 ni3"
   },
   {
-    "id": 3, 
+    "id": 3,
     "code": "4ED6",
     "sinogram": "他",
     "key": "亻",
@@ -36,7 +36,7 @@
     "examplePinyin": "ta1 hen3 da4"
   },
   {
-    "id": 4, 
+    "id": 4,
     "code": "5979",
     "sinogram": "她",
     "key": "女",
@@ -48,7 +48,7 @@
     "examplePinyin": "ta1 hen3 ke3 ai4"
   },
   {
-    "id": 5, 
+    "id": 5,
     "code": "8FD9",
     "sinogram": "这",
     "key": "辶",
@@ -60,7 +60,7 @@
     "examplePinyin": "zhe4 shi4 shen2 me0"
   },
   {
-    "id": 6, 
+    "id": 6,
     "code": "662F",
     "sinogram": "是",
     "key": "日",
@@ -72,7 +72,7 @@
     "examplePinyin": "zhe4 shi4 shen2 me0"
   },
   {
-    "id": 7, 
+    "id": 7,
     "code": "5BB6",
     "sinogram": "家",
     "key": "宀",
@@ -84,7 +84,7 @@
     "examplePinyin": "wo3 de0 jia1"
   },
   {
-    "id": 8, 
+    "id": 8,
     "code": "6709",
     "sinogram": "有",
     "key": "月",
@@ -96,7 +96,7 @@
     "examplePinyin": "ni3 you3 shen2 me0"
   },
   {
-    "id": 9, 
+    "id": 9,
     "code": "8FD8",
     "sinogram": "还",
     "key": "辶",
@@ -108,7 +108,7 @@
     "examplePinyin": "hai2 ke3 yi3"
   },
   {
-    "id": 10, 
+    "id": 10,
     "code": "8D70",
     "sinogram": "走",
     "key": "走",
@@ -120,7 +120,7 @@
     "examplePinyin": ""
   },
   {
-    "id": 11, 
+    "id": 11,
     "code": "65E9",
     "sinogram": "早",
     "key": "日",
@@ -132,7 +132,7 @@
     "examplePinyin": "zao3 shang4"
   },
   {
-    "id": 12, 
+    "id": 12,
     "code": "597D",
     "sinogram": "好",
     "key": "女",
@@ -144,7 +144,7 @@
     "examplePinyin": "hao3 chi1"
   },
   {
-    "id": 13, 
+    "id": 13,
     "code": "53EB",
     "sinogram": "叫",
     "key": "口",
@@ -156,7 +156,7 @@
     "examplePinyin": "wo3 jiao4 xiao3 se4"
   },
   {
-    "id": 14, 
+    "id": 14,
     "code": "53BB",
     "sinogram": "去",
     "key": "厶",
@@ -168,7 +168,7 @@
     "examplePinyin": "ni3 qu4 na3 li3"
   },
   {
-    "id": 15, 
+    "id": 15,
     "code": "770B",
     "sinogram": "看",
     "key": "目",
@@ -180,7 +180,7 @@
     "examplePinyin": "kan4 yi1 kan4"
   },
   {
-    "id": 16, 
+    "id": 16,
     "code": "4E8B",
     "sinogram": "事",
     "key": "亅",
@@ -192,7 +192,7 @@
     "examplePinyin": "zhe4 ge4 shi4"
   },
   {
-    "id": 17, 
+    "id": 17,
     "code": "8BF7",
     "sinogram": "请",
     "key": "讠",
@@ -204,9 +204,9 @@
     "examplePinyin": "qing3 shuo1"
   },
   {
-    "id": 18, 
+    "id": 18,
     "code": "8BF4",
-    "sinogram": "请",
+    "sinogram": "说",
     "key": "讠",
     "strikesCount": 9,
     "strikes": "丶フ丶ノ丨フ一ノフ",
@@ -216,7 +216,7 @@
     "examplePinyin": "shuo1 han4 yu3"
   },
   {
-    "id": 19, 
+    "id": 19,
     "code": "5148",
     "sinogram": "先",
     "key": "儿",
@@ -228,7 +228,7 @@
     "examplePinyin": "ni3 xian1 shuo1"
   },
   {
-    "id": 20, 
+    "id": 20,
     "code": "540E",
     "sinogram": "后",
     "key": "口",
@@ -236,7 +236,667 @@
     "strikes": "ノノ一丨フ一",
     "pinyin": "hou",
     "tone": 4,
-    "exampleSino": "XXXXXXX",
+    "exampleSino": "上班以后",
     "examplePinyin": ""
+  },
+  {
+    "id": 21,
+    "code": "4E00",
+    "sinogram": "一",
+    "key": "一",
+    "strikesCount": 1,
+    "strikes": "一",
+    "pinyin": "yi",
+    "tone": 1,
+    "exampleSino": "一只猫",
+    "examplePinyin": "yi1 zhi1 mao1"
+  },
+  {
+    "id": 22,
+    "code": "4E8C",
+    "sinogram": "二",
+    "key": "二",
+    "strikesCount": 4,
+    "strikes": "一一",
+    "pinyin": "er",
+    "tone": 2,
+    "exampleSino": "二十岁",
+    "examplePinyin": "er4 shi2 sui4"
+  },
+  {
+    "id": 23,
+    "code": "4E09",
+    "sinogram": "三",
+    "key": "一",
+    "strikesCount": 3,
+    "strikes": "一一一",
+    "pinyin": "san",
+    "tone": 1,
+    "exampleSino": "三只小猪",
+    "examplePinyin": "san1 zhi1 xiao3 zhu1"
+  },
+  {
+    "id": 24,
+    "code": "56DB",
+    "sinogram": "四",
+    "key": "囗",
+    "strikesCount": 5,
+    "strikes": "丨フノフ一",
+    "pinyin": "si",
+    "tone": 4,
+    "exampleSino": "四个苹果",
+    "examplePinyin": "si4 ge4 ping2 guo3"
+  },
+  {
+    "id": 25,
+    "code": "4E94",
+    "sinogram": "五",
+    "key": "二",
+    "strikesCount": 4,
+    "strikes": "一丨フ一",
+    "pinyin": "wu",
+    "tone": 3,
+    "exampleSino": "五年以后",
+    "examplePinyin": "wu3 nian2 yi3 hou4"
+  },
+  {
+    "id": 26,
+    "code": "4E24",
+    "sinogram": "两",
+    "key": "一",
+    "strikesCount": 7,
+    "strikes": "一丨フノ丶ノ丶",
+    "pinyin": "liang",
+    "tone": 3,
+    "exampleSino": "两杯茶",
+    "examplePinyin": "liang3 bei1 cha2"
+  },
+  {
+    "id": 27,
+    "code": "7684",
+    "sinogram": "的",
+    "key": "白",
+    "strikesCount": 8,
+    "strikes": "ノ丨フ一一ノフ丶",
+    "pinyin": "de",
+    "tone": 0,
+    "exampleSino": "我的猫",
+    "examplePinyin": "wo3 de0 mao1"
+  },
+  {
+    "id": 28,
+    "code": "4EEC",
+    "sinogram": "们",
+    "key": "亻",
+    "strikesCount": 5,
+    "strikes": "ノ丨丶丨フ",
+    "pinyin": "men",
+    "tone": 2,
+    "exampleSino": "你们好吗",
+    "examplePinyin": "ni3 men2 hao3 ma0"
+  },
+  {
+    "id": 29,
+    "code": "4E5F",
+    "sinogram": "也",
+    "key": "乙",
+    "strikesCount": 3,
+    "strikes": "フ丨フ",
+    "pinyin": "ye",
+    "tone": 3,
+    "exampleSino": "我也喜欢",
+    "examplePinyin": "wo3 ye3 xi3 huan1"
+  },
+  {
+    "id": 30,
+    "code": "90FD",
+    "sinogram": "都",
+    "key": "阝",
+    "strikesCount": 10,
+    "strikes": "一丨一ノ丨フ一一フ丨",
+    "pinyin": "dou",
+    "tone": 1,
+    "exampleSino": "他们都搞",
+    "examplePinyin": "ta1 men2 dou1 gao3"
+  },
+  {
+    "id": 31,
+    "code": "5F88",
+    "sinogram": "很",
+    "key": "彳",
+    "strikesCount": 9,
+    "strikes": "ノノ丨フ一一フノ丶",
+    "pinyin": "hen",
+    "tone": 3,
+    "exampleSino": "他很好",
+    "examplePinyin": "ta1 hen3 hao3"
+  },
+  {
+    "id": 32,
+    "code": "591A",
+    "sinogram": "多",
+    "key": "夕",
+    "strikesCount": 6,
+    "strikes": "ノフ丶ノフ丶",
+    "pinyin": "duo",
+    "tone": 1,
+    "exampleSino": "有很多",
+    "examplePinyin": "you3 hen3 duo1"
+  },
+  {
+    "id": 33,
+    "code": "73B0",
+    "sinogram": "现",
+    "key": "见",
+    "strikesCount": 8,
+    "strikes": "一一丨一丨フノフ",
+    "pinyin": "xian",
+    "tone": 4,
+    "exampleSino": "现在",
+    "examplePinyin": "xian4 zai4"
+  },
+  {
+    "id": 34,
+    "code": "5728",
+    "sinogram": "在",
+    "key": "土",
+    "strikesCount": 6,
+    "strikes": "一ノ丨一丨一",
+    "pinyin": "zai",
+    "tone": 4,
+    "exampleSino": "现在",
+    "examplePinyin": "xian4 zai4"
+  },
+  {
+    "id": 35,
+    "code": "4ECA",
+    "sinogram": "今",
+    "key": "人",
+    "strikesCount": 4,
+    "strikes": "ノ丶丶フ",
+    "pinyin": "jin",
+    "tone": 1,
+    "exampleSino": "今天",
+    "examplePinyin": "jin1 tian1"
+  },
+  {
+    "id": 36,
+    "code": "5929",
+    "sinogram": "天",
+    "key": "大",
+    "strikesCount": 4,
+    "strikes": "一一ノ丶",
+    "pinyin": "tian",
+    "tone": 1,
+    "exampleSino": "今天",
+    "examplePinyin": "jin1 tian1"
+  },
+  {
+    "id": 37,
+    "code": "6628",
+    "sinogram": "昨",
+    "key": "日",
+    "strikesCount": 9,
+    "strikes": "丨フ一一ノ一丨一一",
+    "pinyin": "zuo",
+    "tone": 2,
+    "exampleSino": "昨天",
+    "examplePinyin": "zuo2 tian1"
+  },
+  {
+    "id": 38,
+    "code": "660E",
+    "sinogram": "明",
+    "key": "日",
+    "strikesCount": 8,
+    "strikes": "丨フ一一ノフ一一",
+    "pinyin": "ming",
+    "tone": 2,
+    "exampleSino": "明天",
+    "examplePinyin": "ming2 tian1"
+  },
+  {
+    "id": 39,
+    "code": "4EBA",
+    "sinogram": "人",
+    "key": "人",
+    "strikesCount": 2,
+    "strikes": "ノ丶",
+    "pinyin": "ren",
+    "tone": 2,
+    "exampleSino": "一个人",
+    "examplePinyin": "yi1 ge4 ren2"
+  },
+  {
+    "id": 40,
+    "code": "732B",
+    "sinogram": "猫",
+    "key": "犭",
+    "strikesCount": 11,
+    "strikes": "ノフノ一丨丨丨フ一丨一",
+    "pinyin": "mao",
+    "tone": 1,
+    "exampleSino": "我的猫",
+    "examplePinyin": "wo3 de0 mao1"
+  },
+  {
+    "id": 41,
+    "sinogram": "六",
+    "pinyin": "liu",
+    "tone": 4,
+    "exampleSino": "刘志狗"
+  },
+  {
+    "id": 42,
+    "sinogram": "七",
+    "pinyin": "qi",
+    "tone": 1,
+    "exampleSino": "七杯茶"
+  },
+  {
+    "id": 43,
+    "sinogram": "八",
+    "pinyin": "ba",
+    "tone": 1,
+    "exampleSino": "八点半"
+  },
+  {
+    "id": 44,
+    "sinogram": "九",
+    "pinyin": "jiu",
+    "tone": 3,
+    "exampleSino": "九岁"
+  },
+  {
+    "id": 45,
+    "sinogram": "十",
+    "pinyin": "shi",
+    "tone": 2,
+    "exampleSino": "十个人"
+  },
+  {
+    "id": 46,
+    "sinogram": "百",
+    "pinyin": "bai",
+    "tone": 3,
+    "exampleSino": "一百块"
+  },
+  {
+    "id": 47,
+    "sinogram": "千",
+    "pinyin": "qian",
+    "tone": 1,
+    "exampleSino": "千年以前"
+  },
+  {
+    "id": 48,
+    "sinogram": "万",
+    "pinyin": "wan",
+    "tone": 4,
+    "exampleSino": "三万块"
+  },
+  {
+    "id": 49,
+    "sinogram": "零",
+    "pinyin": "ling",
+    "tone": 2,
+    "exampleSino": "二零二二"
+  },
+  {
+    "id": 50,
+    "sinogram": "年",
+    "pinyin": "nian",
+    "tone": 2,
+    "exampleSino": "千年以前"
+  },
+  {
+    "id": 51,
+    "sinogram": "月",
+    "pinyin": "yue",
+    "tone": 4,
+    "exampleSino": "二月十三日"
+  },
+  {
+    "id": 52,
+    "sinogram": "日",
+    "pinyin": "ri",
+    "tone": 4,
+    "exampleSino": "二月十三日"
+  },
+  {
+    "id": 53,
+    "sinogram": "左",
+    "pinyin": "zuo",
+    "tone": 3,
+    "exampleSino": ""
+  },
+  {
+    "id": 54,
+    "sinogram": "右",
+    "pinyin": "you",
+    "tone": 4,
+    "exampleSino": ""
+  },
+  {
+    "id": 55,
+    "sinogram": "什",
+    "pinyin": "shen",
+    "tone": 2,
+    "exampleSino": "什么时候"
+  },
+  {
+    "id": 56,
+    "sinogram": "么",
+    "pinyin": "me",
+    "tone": 0,
+    "exampleSino": "什么时候"
+  },
+  {
+    "id": 57,
+    "sinogram": "木",
+    "pinyin": "mu",
+    "tone": 4,
+    "exampleSino": "一个大木"
+  },
+  {
+    "id": 58,
+    "sinogram": "火",
+    "pinyin": "huo",
+    "tone": 3,
+    "exampleSino": "这个火山"
+  },
+  {
+    "id": 59,
+    "sinogram": "山",
+    "pinyin": "shan1",
+    "tone": 1,
+    "exampleSino": "这个火山"
+  },
+  {
+    "id": 60,
+    "sinogram": "水",
+    "pinyin": "shui",
+    "tone": 3,
+    "exampleSino": "一杯水"
+  },
+  {
+    "id": 61,
+    "sinogram": "吗",
+    "pinyin": "ma",
+    "tone": 0,
+    "exampleSino": "你好吗"
+  },
+  {
+    "id": 62,
+    "sinogram": "个",
+    "pinyin": "ge",
+    "tone": 4,
+    "exampleSino": "一个人"
+  },
+  {
+    "id": 63,
+    "sinogram": "上",
+    "pinyin": "shang",
+    "tone": 4,
+    "exampleSino": "上班以后"
+  },
+  {
+    "id": 64,
+    "sinogram": "下",
+    "pinyin": "xia",
+    "tone": 4,
+    "exampleSino": "下班以前"
+  },
+  {
+    "id": 65,
+    "sinogram": "目",
+    "pinyin": "mu",
+    "tone": 4,
+    "exampleSino": ""
+  },
+  {
+    "id": 66,
+    "sinogram": "手",
+    "pinyin": "shou",
+    "tone": 3,
+    "exampleSino": "我的手机"
+  },
+  {
+    "id": 67,
+    "sinogram": "爱",
+    "pinyin": "ai",
+    "tone": 4,
+    "exampleSino": "我爱你"
+  },
+  {
+    "id": 68,
+    "sinogram": "自",
+    "pinyin": "zi",
+    "tone": 4,
+    "exampleSino": "自行车"
+  },
+  {
+    "id": 69,
+    "sinogram": "边",
+    "pinyin": "bian",
+    "tone": 1,
+    "exampleSino": "我家旁边"
+  },
+  {
+    "id": 70,
+    "sinogram": "班",
+    "pinyin": "ban",
+    "tone": 1,
+    "exampleSino": "下班以前"
+  },
+  {
+    "id": 71,
+    "sinogram": "学",
+    "pinyin": "xue",
+    "tone": 2,
+    "exampleSino": "你的学校"
+  },
+  {
+    "id": 72,
+    "sinogram": "云",
+    "pinyin": "yun",
+    "tone": 2,
+    "exampleSino": "有很多云"
+  },
+  {
+    "id": 73,
+    "sinogram": "雨",
+    "pinyin": "yu",
+    "tone": 3,
+    "exampleSino": "今天下雨"
+  },
+  {
+    "id": 74,
+    "sinogram": "校",
+    "pinyin": "xiao",
+    "tone": 4,
+    "exampleSino": "你的学校"
+  },
+  {
+    "id": 75,
+    "sinogram": "生",
+    "pinyin": "sheng",
+    "tone": 1,
+    "exampleSino": ""
+  },
+  {
+    "id": 76,
+    "sinogram": "远",
+    "pinyin": "yuan",
+    "tone": 3,
+    "exampleSino": ""
+  },
+  {
+    "id": 77,
+    "sinogram": "田",
+    "pinyin": "tian",
+    "tone": 2,
+    "exampleSino": ""
+  },
+  {
+    "id": 78,
+    "sinogram": "虫",
+    "pinyin": "cong",
+    "tone": 2,
+    "exampleSino": ""
+  },
+  {
+    "id": 79,
+    "sinogram": "头",
+    "pinyin": "tou",
+    "tone": 2,
+    "exampleSino": "我的头"
+  },
+  {
+    "id": 80,
+    "sinogram": "近",
+    "pinyin": "jin",
+    "tone": 4,
+    "exampleSino": ""
+  },
+  {
+    "id": 81,
+    "sinogram": "小",
+    "pinyin": "xiao",
+    "tone": 3,
+    "exampleSino": "你很小"
+  },
+  {
+    "id": 82,
+    "sinogram": "大",
+    "pinyin": "da",
+    "tone": 4,
+    "exampleSino": "一个大木"
+  },
+  {
+    "id": 83,
+    "sinogram": "不",
+    "pinyin": "bu",
+    "tone": 4,
+    "exampleSino": "她不爱你"
+  },
+  {
+    "id": 84,
+    "sinogram": "吃",
+    "pinyin": "chi",
+    "tone": 1,
+    "exampleSino": "我吃饭了"
+  },
+  {
+    "id": 85,
+    "sinogram": "点",
+    "pinyin": "dian",
+    "tone": 3,
+    "exampleSino": "八点半"
+  },
+  {
+    "id": 86,
+    "sinogram": "少",
+    "pinyin": "shao",
+    "tone": 3,
+    "exampleSino": "有很少毛"
+  },
+  {
+    "id": 87,
+    "sinogram": "做",
+    "pinyin": "zuo",
+    "tone": 4,
+    "exampleSino": "他做饭吗"
+  },
+  {
+    "id": 88,
+    "sinogram": "和",
+    "pinyin": "he",
+    "tone": 2,
+    "exampleSino": "我和你"
+  },
+  {
+    "id": 89,
+    "sinogram": "北",
+    "pinyin": "bei",
+    "tone": 3,
+    "exampleSino": "北京"
+  },
+  {
+    "id": 90,
+    "sinogram": "南",
+    "pinyin": "nan",
+    "tone": 2,
+    "exampleSino": "南京"
+  },
+  {
+    "id": 91,
+    "sinogram": "东",
+    "pinyin": "dong",
+    "tone": 1,
+    "exampleSino": "广东"
+  },
+  {
+    "id": 92,
+    "sinogram": "西",
+    "pinyin": "xi",
+    "tone": 1,
+    "exampleSino": "广西"
+  },
+  {
+    "id": 93,
+    "sinogram": "要",
+    "pinyin": "yao",
+    "tone": 4,
+    "exampleSino": "我要吃饭"
+  },
+  {
+    "id": 94,
+    "sinogram": "开",
+    "pinyin": "kai",
+    "tone": 1,
+    "exampleSino": "他开电视"
+  },
+  {
+    "id": 95,
+    "sinogram": "来",
+    "pinyin": "lai",
+    "tone": 2,
+    "exampleSino": "你来不来"
+  },
+  {
+    "id": 96,
+    "sinogram": "没",
+    "pinyin": "mei",
+    "tone": 2,
+    "exampleSino": "我没有猫"
+  },
+  {
+    "id": 97,
+    "sinogram": "谢",
+    "pinyin": "xie",
+    "tone": 4,
+    "exampleSino": "谢谢你"
+  },
+  {
+    "id": 98,
+    "sinogram": "茶",
+    "pinyin": "cha",
+    "tone": 2,
+    "exampleSino": "两杯茶"
+  },
+  {
+    "id": 99,
+    "sinogram": "几",
+    "pinyin": "ji",
+    "tone": 3,
+    "exampleSino": "你几岁"
+  },
+  {
+    "id": 100,
+    "sinogram": "谁",
+    "pinyin": "shei",
+    "tone": 2,
+    "exampleSino": "他是谁"
   }
 ]

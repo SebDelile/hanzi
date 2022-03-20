@@ -30,13 +30,13 @@ export function HanziTable() {
   };
 
   return (
-    <main className="w-full py-4">
+    <main className="w-full py-4 mt-20">
       {isLoading ? (
         <LoadingSpinner />
       ) : isError ? (
         <p>{"une erreur s'est produite"}</p>
       ) : (
-        <ul className="first-child grid grid-cols-8 gap-4 mx-auto">
+        <ul className="first-child grid grid-cols-2 xxs:grid-cols-3 xs:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 gap-4 mx-auto">
           {data?.map((hanzi) => (
             <HanziTile key={hanzi.id} hanzi={hanzi} handleClick={openModal} />
           ))}

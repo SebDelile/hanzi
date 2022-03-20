@@ -40,33 +40,33 @@ export function HanziDetailModal({
     <ReactModal
       isOpen={isModalOpen}
       onRequestClose={closeModal}
-      className="w-max absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border bg-white rounded-lg p-12 outline-none"
+      className="w-full h-full absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 border bg-white outline-none xs:rounded-lg xs:w-max xs:h-max xs:p-12"
       overlayClassName="fixed inset-0 bg-neutral-500 bg-opacity-50"
     >
       {selectedHanzi && (
-        <div className="flex justify-center gap-8 items-center">
+        <div className="h-full flex flex-col justify-center gap-8 items-center lg:flex-row">
           <HanziGrid className="font-hanzi text-11xl leading-none">
             {selectedHanzi.sinogram}
           </HanziGrid>
-          <div className="grid grid-cols-3 gap-x-4 text-xl items-center justify-center">
+          <div className="grid grid-cols-3 gap-x-4 items-center justify-center text-2xl md:text-3xl">
             <Cell className="col-span-full text-5xl">
               {formatPinyin(selectedHanzi.pinyin, selectedHanzi.tone)}
             </Cell>
             <Separator />
             <Cell>Clef</Cell>
-            <Cell className="col-span-2 text-3xl font-hanziClassic">
+            <Cell className="col-span-2 font-hanziClassic">
               {selectedHanzi.key}
             </Cell>
             <Separator />
             <Cell>Traits</Cell>
-            <Cell className="col-span-2 text-3xl font-hanziClassic">
+            <Cell className="col-span-2 font-hanziClassic">
               {selectedHanzi.strikes}
             </Cell>
             <Separator />
-            <Cell className="col-span-full text-3xl font-hanziClassic">
+            <Cell className="col-span-full font-hanziClassic text-3xl">
               {selectedHanzi.exampleSino}
             </Cell>
-            <Cell className="col-span-full">
+            <Cell className="col-span-full text-lg md:text-xl">
               {formatPinyinSentence(selectedHanzi.examplePinyin)}
             </Cell>
           </div>

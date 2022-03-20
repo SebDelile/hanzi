@@ -5,26 +5,26 @@ import { CloseIcon } from '../icons/CloseIcon';
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="w-full py-4 bg-primary text-primary-contrast">
-      <div className="first-child flex justify-between items-center">
+    <header className="fixed top-0 w-full py-4 bg-primary text-primary-contrast shadow-md">
+      <div className="first-child flex justify-between relative flex-wrap">
         <h1 className="text-4xl font-bold font-hanzi">学习汉语</h1>
-        <nav className="flex justify-end flex-row-reverse items-center">
-          <button
-            type="button"
-            onClick={(): void => setIsMenuOpen((state) => !state)}
-            className="text-4xl ml-6"
-          >
-            {isMenuOpen ? <CloseIcon /> : <BurgerMenuIcon />}
-          </button>
-          {isMenuOpen ? (
-            <ul className="list-none flex justify-end items-center gap-3">
-              {['Accueil', 'Test lecture', 'Test écriture'].map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          ) : null}
-        </nav>
+        <button
+          type="button"
+          onClick={(): void => setIsMenuOpen((state) => !state)}
+          className="text-4xl ml-6 self-end"
+        >
+          {isMenuOpen ? <CloseIcon /> : <BurgerMenuIcon />}
+        </button>
       </div>
+      <nav className="first-child flex justify-end">
+        {isMenuOpen ? (
+          <ul className="w-max list-none flex flex-col items-center gap-3 mt-4 xs:flex-row">
+            {['Accueil', 'Test lecture', 'Test écriture'].map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </nav>
     </header>
   );
 }

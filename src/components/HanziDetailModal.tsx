@@ -23,8 +23,7 @@ const fieldCells = {
   id: 'Identifiant',
   code: 'Unicode',
   key: 'Clef principale',
-  strikesCount: 'Nombre de traits',
-  strikes: 'Détail des traits',
+  strokes: 'Détail des traits',
   pinyin: 'Pinyin',
   tone: 'Ton',
   exampleSino: 'Exemple en sinogrammes',
@@ -60,7 +59,7 @@ export function HanziDetailModal({
             <Separator />
             <Cell>Traits</Cell>
             <Cell className="col-span-2 font-hanziClassic">
-              {selectedHanzi.strikes}
+              {selectedHanzi.strokes}
             </Cell>
             <Separator />
             <Cell className="col-span-full font-hanziClassic text-3xl">

@@ -3,8 +3,7 @@ export type HanziObject = {
   code: string;
   sinogram: string;
   key: string;
-  strikesCount: number;
-  strikes: string;
+  strokes: string;
   pinyin: string;
   tone: 0 | 1 | 2 | 3 | 4;
   exampleSino: string;

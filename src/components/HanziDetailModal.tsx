@@ -1,5 +1,7 @@
 import ReactModal from 'react-modal';
 import { CloseIcon } from '../icons/CloseIcon';
+import { ChevronRightIcon } from '../icons/ChevronRightIcon';
+import { ChevronLeftIcon } from '../icons/ChevronLeftIcon';
 import { HanziObject } from '../types/HanziObject';
 import { formatPinyin } from '../utils/formatPinyin';
 import { formatPinyinSentence } from '../utils/formatPinyinSentence';
@@ -17,6 +19,8 @@ type Props = {
   selectedHanzi: HanziObject | undefined;
   isModalOpen: boolean;
   closeModal: () => void;
+  selectNext: () => void;
+  selectPrevious: () => void;
 };
 
 const fieldCells = {
@@ -34,6 +38,8 @@ export function HanziDetailModal({
   isModalOpen,
   closeModal,
   selectedHanzi,
+  selectNext,
+  selectPrevious,
 }: Props) {
   return (
     <ReactModal
@@ -71,8 +77,23 @@ export function HanziDetailModal({
           </div>
         </div>
       )}
-      <button className="absolute right-4 top-4 text-3xl" onClick={closeModal}>
+      <button
+        className="absolute right-4 top-4 text-gray-500 text-3xl"
+        onClick={closeModal}
+      >
         <CloseIcon />
+      </button>
+      <button
+        className="absolute right-0 top-1/2 text-gray-500 text-3xl"
+        onClick={selectNext}
+      >
+        <ChevronRightIcon />
+      </button>
+      <button
+        className="absolute left-0 top-1/2 text-gray-500 text-3xl"
+        onClick={selectPrevious}
+      >
+        <ChevronLeftIcon />
       </button>
     </ReactModal>
   );

@@ -29,6 +29,22 @@ export function HanziTable() {
     setIsModalOpen(false);
   };
 
+  const selectNext = (): void => {
+    if (data && selectedHanzi) {
+      const index = data.findIndex(({ id }) => id === selectedHanzi.id);
+      if (index === data.length - 1) setSelectedHanzi(data[0]);
+      else setSelectedHanzi(data[index + 1]);
+    }
+  };
+
+  const selectPrevious = (): void => {
+    if (data && selectedHanzi) {
+      const index = data.findIndex(({ id }) => id === selectedHanzi.id);
+      if (index === 0) setSelectedHanzi(data[data.length - 1]);
+      else setSelectedHanzi(data[index - 1]);
+    }
+  };
+
   return (
     <main className="w-full py-4 mt-20">
       {isLoading ? (
@@ -46,6 +62,8 @@ export function HanziTable() {
         isModalOpen={isModalOpen}
         closeModal={closeModal}
         selectedHanzi={selectedHanzi}
+        selectNext={selectNext}
+        selectPrevious={selectPrevious}
       />
     </main>
   );

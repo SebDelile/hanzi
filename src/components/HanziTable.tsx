@@ -1,12 +1,12 @@
 import { useState } from 'react';
+import { useHanzi } from '../contexts/HanziContext';
 import { HanziObject } from '../types/HanziObject';
-import { useFetch } from '../utils/useFetch';
 import { HanziDetailModal } from './HanziDetailModal';
 import { HanziTile } from './HanziTile';
 import { LoadingSpinner } from './LoadingSpinner';
 
 export function HanziTable() {
-  const { isLoading, data, isError } = useFetch('database.json');
+  const { isLoading, data, isError } = useHanzi();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedHanzi, setSelectedHanzi] = useState<HanziObject | undefined>(

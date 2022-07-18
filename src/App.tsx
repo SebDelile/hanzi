@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HanziTable } from './components/HanziTable';
+import { HanziTable } from './pages/HanziTable';
 import { ReadingTest } from './pages/ReadingTest';
 import { WritingTest } from './pages/WritingTest';
 import { Header } from './components/Header';

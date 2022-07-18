@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useHanzi } from '../contexts/HanziContext';
 import { HanziObject } from '../types/HanziObject';
-import { HanziDetailModal } from './HanziDetailModal';
-import { HanziTile } from './HanziTile';
-import { LoadingSpinner } from './LoadingSpinner';
+import { HanziDetailModal } from '../components/HanziDetailModal';
+import { HanziTile } from '../components/HanziTile';
+import { LoadingSpinner } from '../components/LoadingSpinner';
 
 export function HanziTable() {
   const { isLoading, data, isError } = useHanzi();

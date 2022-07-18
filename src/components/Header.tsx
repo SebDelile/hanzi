@@ -8,7 +8,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 w-full py-4 bg-primary text-primary-contrast shadow-md">
-      <div className="first-child flex justify-between relative flex-wrap">
+      <div className="app-container flex justify-between relative flex-wrap">
         <h1 className="text-4xl font-bold font-hanzi">学习汉语</h1>
         <button
           type="button"
@@ -18,7 +18,7 @@ export function Header() {
           {isMenuOpen ? <CloseIcon /> : <BurgerMenuIcon />}
         </button>
       </div>
-      <nav className="first-child flex justify-end">
+      <nav className="app-container flex justify-end">
         {isMenuOpen ? (
           <ul
             className="w-max list-none flex flex-col items-center gap-3 mt-4 xs:flex-row"

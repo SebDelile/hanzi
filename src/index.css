@@ -13,6 +13,6 @@
   @apply bg-gray-200 text-gray-800 font-body min-h-screen w-full overflow-hidden flex flex-col justify-start items-center;
 }
 
-.first-child {
+.app-container {
   @apply mx-auto px-8 2xl:container;
 }

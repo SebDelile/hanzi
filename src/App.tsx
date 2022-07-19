@@ -10,7 +10,7 @@ export function App() {
     <HanziContextProvider>
       <Router>
         <Header />
-        <main className="app-container w-full py-4 mt-20">
+        <main className="app-container w-full py-4 my-20 flex flex-col flex-grow justify-center">
           <Routes>
             <Route path="/" element={<HanziTable />} />
             <Route path="/writing-test" element={<WritingTest />} />

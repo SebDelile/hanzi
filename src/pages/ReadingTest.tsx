@@ -19,7 +19,13 @@ export function ReadingTest() {
           />
         );
       case workingStep:
-        return <ReadingTestWorkingStep setCurrentStep={setCurrentStep} />;
+        return (
+          <ReadingTestWorkingStep
+            testSheet={testSheet}
+            setTestSheet={setTestSheet}
+            setCurrentStep={setCurrentStep}
+          />
+        );
       case resultStep:
         return <ReadingTestResultStep setCurrentStep={setCurrentStep} />;
       default:

@@ -27,7 +27,12 @@ export function ReadingTest() {
           />
         );
       case resultStep:
-        return <ReadingTestResultStep setCurrentStep={setCurrentStep} />;
+        return (
+          <ReadingTestResultStep
+            testSheet={testSheet}
+            setCurrentStep={setCurrentStep}
+          />
+        );
       default:
         return null;
     }

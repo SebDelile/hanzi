@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { STARTER_STEP, RESULT_STEP } from '../constants/testSteps';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 import { formatPinyin } from '../utils/formatPinyin';
@@ -24,6 +24,7 @@ export function ReadingTestWorkingStep({
   const [currentAnswer, setCurrentAnswer] = useState(INITIAL_CURRENT_ANSWER);
   const [isTouched, setIsTouched] = useState(INITIAL_IS_TOUCHED);
   const [isError, setIsError] = useState(INITIAL_IS_ERROR);
+  const inputElement = useRef<HTMLInputElement>(null);
 
   function handleChangeCurrentAnswer(event: React.FormEvent<HTMLInputElement>) {
     const { value } = event.currentTarget;
@@ -55,6 +56,9 @@ export function ReadingTestWorkingStep({
         setIsError(INITIAL_IS_ERROR);
       }
     }
+    if (inputElement && inputElement.current) {
+      inputElement.current.focus();
+    }
   }
 
   return (
@@ -79,9 +83,16 @@ export function ReadingTestWorkingStep({
           </label>
           <input
             type="text"
+            ref={inputElement}
             onBlur={() => setIsTouched(true)}
             onChange={handleChangeCurrentAnswer}
             value={currentAnswer}
+            onKeyPress={(event) => {
+              if (event.key === 'Enter') {
+                event.preventDefault();
+                handleSubmitAnswer();
+              }
+            }}
           />
           <p>
             {isTouched && isError

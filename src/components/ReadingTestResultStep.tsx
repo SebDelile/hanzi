@@ -1,4 +1,4 @@
-import { starterStep } from '../constants/testSteps';
+import { STARTER_STEP } from '../constants/testSteps';
 import { HanziObject } from '../types/HanziObject';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 import { formatPinyin } from '../utils/formatPinyin';
@@ -40,7 +40,7 @@ export function ReadingTestResultStep({ testSheet, setCurrentStep }: Props) {
       </ul>
       <button
         className="button self-center"
-        onClick={() => setCurrentStep(starterStep)}
+        onClick={() => setCurrentStep(STARTER_STEP)}
       >
         reset
       </button>

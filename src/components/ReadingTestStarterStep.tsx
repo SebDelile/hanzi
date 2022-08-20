@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import ReactSelect from 'react-select';
-import { workingStep } from '../constants/testSteps';
+import { WORKING_STEP } from '../constants/testSteps';
 import { useHanzi } from '../contexts/HanziContext';
 import { HanziObject } from '../types/HanziObject';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
@@ -35,7 +35,7 @@ export function ReadingTestStarterStep({
       setTestSheet(
         hanziSelection.map((hanzi) => ({ hanzi, pinyin: '', tone: null }))
       );
-      setCurrentStep(workingStep);
+      setCurrentStep(WORKING_STEP);
     }
   }
 

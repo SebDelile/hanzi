@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { starterStep, resultStep } from '../constants/testSteps';
+import { STARTER_STEP, RESULT_STEP } from '../constants/testSteps';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 import { formatPinyin } from '../utils/formatPinyin';
 import { parsePinyinTone } from '../utils/parsePinyinTone';
@@ -52,7 +52,7 @@ export function ReadingTestWorkingStep({
   function handleFinish() {
     if (!isError) {
       handleSaveCurrentAnswer();
-      setCurrentStep(resultStep);
+      setCurrentStep(RESULT_STEP);
     }
   }
 
@@ -93,7 +93,7 @@ export function ReadingTestWorkingStep({
         <button
           className="button"
           onClick={() => {
-            setCurrentStep(starterStep);
+            setCurrentStep(STARTER_STEP);
           }}
         >
           Réinitialiser

@@ -1,3 +1,3 @@
-export const starterStep = 'starter';
-export const workingStep = 'working';
-export const resultStep = 'result';
+export const STARTER_STEP = 'starter';
+export const WORKING_STEP = 'working';
+export const RESULT_STEP = 'result';

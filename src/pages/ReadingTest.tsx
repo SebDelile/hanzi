@@ -2,23 +2,27 @@ import { useState } from 'react';
 import { ReadingTestResultStep } from '../components/ReadingTestResultStep';
 import { ReadingTestStarterStep } from '../components/ReadingTestStarterStep';
 import { ReadingTestWorkingStep } from '../components/ReadingTestWorkingStep';
-import { starterStep, workingStep, resultStep } from '../constants/testSteps';
+import {
+  STARTER_STEP,
+  WORKING_STEP,
+  RESULT_STEP,
+} from '../constants/testSteps';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 
 export function ReadingTest() {
-  const [currentStep, setCurrentStep] = useState(starterStep);
+  const [currentStep, setCurrentStep] = useState(STARTER_STEP);
   const [testSheet, setTestSheet] = useState<readingTestSheetItem[]>([]);
 
   const renderTestStep = () => {
     switch (currentStep) {
-      case starterStep:
+      case STARTER_STEP:
         return (
           <ReadingTestStarterStep
             setCurrentStep={setCurrentStep}
             setTestSheet={setTestSheet}
           />
         );
-      case workingStep:
+      case WORKING_STEP:
         return (
           <ReadingTestWorkingStep
             testSheet={testSheet}
@@ -26,7 +30,7 @@ export function ReadingTest() {
             setCurrentStep={setCurrentStep}
           />
         );
-      case resultStep:
+      case RESULT_STEP:
         return (
           <ReadingTestResultStep
             testSheet={testSheet}

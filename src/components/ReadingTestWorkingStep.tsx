@@ -24,7 +24,7 @@ export function ReadingTestWorkingStep({
   function handleChangeCurrentAnswer(event: React.FormEvent<HTMLInputElement>) {
     const { value } = event.currentTarget;
     setCurrentAnswer(value);
-    if (!value || parsePinyinTone(value)[0] === 'error') {
+    if (!value || parsePinyinTone(value)[0] === 'invalid') {
       setIsError(true);
     } else {
       setIsError(false);
@@ -33,24 +33,27 @@ export function ReadingTestWorkingStep({
 
   function handleSaveCurrentAnswer() {
     const modifiedTestSheet = [...testSheet];
-    if (!isError) {
-      const [pinyin, tone] = parsePinyinTone(currentAnswer);
-      modifiedTestSheet[currentQuestion].pinyin = pinyin;
-      modifiedTestSheet[currentQuestion].tone = tone;
-      setTestSheet(modifiedTestSheet);
-    }
+
+    const [pinyin, tone] = parsePinyinTone(currentAnswer);
+    modifiedTestSheet[currentQuestion].pinyin = pinyin;
+    modifiedTestSheet[currentQuestion].tone = tone;
+    setTestSheet(modifiedTestSheet);
   }
 
   function handleNextQuestion() {
-    handleSaveCurrentAnswer();
-    setCurrentQuestion(currentQuestion + 1);
-    setCurrentAnswer('');
-    setIsTouched(false);
+    if (!isError) {
+      handleSaveCurrentAnswer();
+      setCurrentQuestion(currentQuestion + 1);
+      setCurrentAnswer('');
+      setIsTouched(false);
+    }
   }
 
   function handleFinish() {
-    handleSaveCurrentAnswer();
-    setCurrentStep(resultStep);
+    if (!isError) {
+      handleSaveCurrentAnswer();
+      setCurrentStep(resultStep);
+    }
   }
 
   return (

@@ -1,10 +1,10 @@
 type StringNumberPair = [string, number];
 
 export function parsePinyinTone(input: string): StringNumberPair {
-  const isValid = [...input].every((char, index) =>
-    index === input.length - 1 ? char.match(/[01234]/) : char.match(/[A-Z]/i)
-  );
-  return isValid
+  // TODO: refine the regexp to only accept valid pinyin
+  // exactly one or more letters + one digit bellow 5
+  const regex = /^[A-Z]+[0-4]$/i;
+  return regex.test(input)
     ? [input.slice(0, -1), parseInt(input.slice(-1))]
-    : ['error', 0];
+    : ['invalid', 0];
 }

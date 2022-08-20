@@ -31,28 +31,21 @@ export function ReadingTestWorkingStep({
     }
   }
 
-  function handleSaveCurrentAnswer() {
-    const modifiedTestSheet = [...testSheet];
-
-    const [pinyin, tone] = parsePinyinTone(currentAnswer);
-    modifiedTestSheet[currentQuestion].pinyin = pinyin;
-    modifiedTestSheet[currentQuestion].tone = tone;
-    setTestSheet(modifiedTestSheet);
-  }
-
-  function handleNextQuestion() {
+  function handleSubmitAnswer() {
     if (!isError) {
-      handleSaveCurrentAnswer();
-      setCurrentQuestion(currentQuestion + 1);
-      setCurrentAnswer('');
-      setIsTouched(false);
-    }
-  }
+      const modifiedTestSheet = [...testSheet];
+      const [pinyin, tone] = parsePinyinTone(currentAnswer);
+      modifiedTestSheet[currentQuestion].pinyin = pinyin;
+      modifiedTestSheet[currentQuestion].tone = tone;
+      setTestSheet(modifiedTestSheet);
 
-  function handleFinish() {
-    if (!isError) {
-      handleSaveCurrentAnswer();
-      setCurrentStep(RESULT_STEP);
+      if (currentQuestion === testSheet.length - 1) {
+        setCurrentStep(RESULT_STEP);
+      } else {
+        setCurrentQuestion(currentQuestion + 1);
+        setCurrentAnswer('');
+        setIsTouched(false);
+      }
     }
   }
 
@@ -98,15 +91,12 @@ export function ReadingTestWorkingStep({
         >
           Réinitialiser
         </button>
-        {currentQuestion === testSheet.length - 1 ? (
-          <button className="button" onClick={handleFinish}>
-            Terminer
-          </button>
-        ) : (
-          <button className="button" onClick={handleNextQuestion}>
-            Question suivante
-          </button>
-        )}
+
+        <button className="button" onClick={handleSubmitAnswer}>
+          {currentQuestion === testSheet.length - 1
+            ? 'Terminer'
+            : 'Question suivante'}
+        </button>
       </article>
     </>
   );

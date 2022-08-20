@@ -11,15 +11,19 @@ type Props = {
   setCurrentStep: (step: string) => void;
 };
 
+const INITIAL_CURRENT_ANSWER = '';
+const INITIAL_IS_TOUCHED = false;
+const INITIAL_IS_ERROR = true;
+
 export function ReadingTestWorkingStep({
   testSheet,
   setTestSheet,
   setCurrentStep,
 }: Props) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [currentAnswer, setCurrentAnswer] = useState('');
-  const [isTouched, setIsTouched] = useState(false);
-  const [isError, setIsError] = useState(true);
+  const [currentAnswer, setCurrentAnswer] = useState(INITIAL_CURRENT_ANSWER);
+  const [isTouched, setIsTouched] = useState(INITIAL_IS_TOUCHED);
+  const [isError, setIsError] = useState(INITIAL_IS_ERROR);
 
   function handleChangeCurrentAnswer(event: React.FormEvent<HTMLInputElement>) {
     const { value } = event.currentTarget;
@@ -32,7 +36,10 @@ export function ReadingTestWorkingStep({
   }
 
   function handleSubmitAnswer() {
-    if (!isError) {
+    if (!isTouched) {
+      setIsTouched(true);
+    }
+    if (currentAnswer && !isError) {
       const modifiedTestSheet = [...testSheet];
       const [pinyin, tone] = parsePinyinTone(currentAnswer);
       modifiedTestSheet[currentQuestion].pinyin = pinyin;
@@ -43,8 +50,9 @@ export function ReadingTestWorkingStep({
         setCurrentStep(RESULT_STEP);
       } else {
         setCurrentQuestion(currentQuestion + 1);
-        setCurrentAnswer('');
-        setIsTouched(false);
+        setCurrentAnswer(INITIAL_CURRENT_ANSWER);
+        setIsTouched(INITIAL_IS_TOUCHED);
+        setIsError(INITIAL_IS_ERROR);
       }
     }
   }

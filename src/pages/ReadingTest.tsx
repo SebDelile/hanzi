@@ -45,7 +45,9 @@ export function ReadingTest() {
   return (
     <section className="mx-auto flex flex-col items-center flex-grow">
       <h1 className="h1">{'Test de lecture'}</h1>
-      <article className="flex flex-grow">{renderTestStep()}</article>
+      <article className="flex flex-grow flex-col items-center justify-center flew-grow max-w-xl mx-auto gap-6">
+        {renderTestStep()}
+      </article>
     </section>
   );
 }

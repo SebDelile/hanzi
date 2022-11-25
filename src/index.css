@@ -21,6 +21,29 @@
   @apply text-center text-3xl font-bold mb-6;
 }
 
+.h2 {
+  @apply text-center text-xl font-bold mb-4;
+}
+
+.button-common {
+  @apply px-4 py-2 shadow-md rounded-md;
+}
+
 .button {
-  @apply px-4 py-2 bg-primary text-primary-contrast shadow-md rounded-md;
+  @apply button-common bg-primary text-primary-contrast;
+}
+
+.button-outline {
+  @apply button-common bg-none text-primary border-primary -outline-2 outline-primary;
+}
+
+@layer utilities {
+  .-outline-2 {
+    outline: solid 2px;
+    outline-offset: -2px;
+  }
+
+  .outline-primary {
+    outline-color: #911a11;
+  }
 }

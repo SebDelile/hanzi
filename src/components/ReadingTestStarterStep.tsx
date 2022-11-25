@@ -40,7 +40,7 @@ export function ReadingTestStarterStep({
   }
 
   return (
-    <div className="flex flex-col items-start justify-center flew-grow max-w-xl mx-auto gap-6">
+    <>
       <label htmlFor="select-hanzi-quantity">
         {'Combien de hanzis inclure dans le test?'}
       </label>
@@ -56,6 +56,6 @@ export function ReadingTestStarterStep({
       <button className="button self-center" onClick={onStart}>
         {'Commencer le test'}
       </button>
-    </div>
+    </>
   );
 }

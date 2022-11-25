@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import { STARTER_STEP, RESULT_STEP } from '../constants/testSteps';
+import { InformationIcon } from '../icons/InformationIcon';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 import { formatPinyin } from '../utils/formatPinyin';
 import { parsePinyinTone } from '../utils/parsePinyinTone';
@@ -63,60 +64,64 @@ export function ReadingTestWorkingStep({
 
   return (
     <>
-      <h2>{`Question ${currentQuestion + 1} sur ${testSheet.length}`}</h2>
-      <article>
+      <h2 className="h2">{`Question ${currentQuestion + 1} sur ${
+        testSheet.length
+      }`}</h2>
+      <div>
         <HanziGrid className="font-hanzi text-11xl leading-none">
           {testSheet[currentQuestion].hanzi.sinogram}
         </HanziGrid>
-        <p>{`Réponse : ${
-          !isError
-            ? formatPinyin(...parsePinyinTone(currentAnswer))
-            : isTouched
-            ? '#####'
-            : ''
-        }`}</p>
-        <div>
-          <label>
-            {
-              'Réponse au format pinyin et ton à la suite sans espace (exemple : "wang3")'
-            }
-          </label>
-          <input
-            type="text"
-            ref={inputElement}
-            onBlur={() => setIsTouched(true)}
-            onChange={handleChangeCurrentAnswer}
-            value={currentAnswer}
-            onKeyPress={(event) => {
-              if (event.key === 'Enter') {
-                event.preventDefault();
-                handleSubmitAnswer();
-              }
-            }}
-          />
-          <p>
-            {isTouched && isError
-              ? 'le format de la réponse est incorrect'
+        <div className="flex text-center items-center h-10">
+          <p className="flex-1 text-xl">Réponse :</p>
+          <p className="flex-1 text-3xl font-bold">
+            {!isError
+              ? formatPinyin(...parsePinyinTone(currentAnswer))
+              : isTouched
+              ? '#####'
               : ''}
           </p>
         </div>
-      </article>
-      <article>
+      </div>
+      <div className="relative py-6 flex items-center gap-4">
+        <input
+          id="input-answer"
+          className="p-2 rounded-md"
+          type="text"
+          ref={inputElement}
+          onBlur={() => setIsTouched(true)}
+          onChange={handleChangeCurrentAnswer}
+          value={currentAnswer}
+          onKeyPress={(event) => {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+              handleSubmitAnswer();
+            }
+          }}
+        />
+        <InformationIcon className="peer text-xl" />
+        <label
+          htmlFor="input-answer"
+          className="invisible peer-hover:visible italic absolute top-0 left-0"
+        >
+          {'Exemple : "wang3"'}
+        </label>
+        <p className="absolute bottom-0 left-0 text-primary">
+          {isTouched && isError ? 'Format incorrect' : ''}
+        </p>
+      </div>
+      <div className="flex justify-center items-center gap-4">
         <button
-          className="button"
+          className="button-outline flex-1"
           onClick={() => {
             setCurrentStep(STARTER_STEP);
           }}
         >
           Réinitialiser
         </button>
-
-        <button className="button" onClick={handleSubmitAnswer}>
-          {currentQuestion === testSheet.length - 1
-            ? 'Terminer'
-            : 'Question suivante'}
+        <button className="button flex-1" onClick={handleSubmitAnswer}>
+          {currentQuestion === testSheet.length - 1 ? 'Terminer' : 'Suivant'}
         </button>
-      </article>
+      </div>
     </>
   );
 }

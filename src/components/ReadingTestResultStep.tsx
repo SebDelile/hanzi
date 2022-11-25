@@ -14,30 +14,46 @@ export function ReadingTestResultStep({ testSheet, setCurrentStep }: Props) {
 
   return (
     <>
-      <div>Result step</div>
-      <div>{`Note : ${testSheet.reduce(
+      <h2 className="h2">{`Résultat : ${testSheet.reduce(
         (acc, cur) => acc + Number(isCorrect(cur)),
         0
-      )} / ${testSheet.length}`}</div>
-      <ul>
-        {testSheet.map((testSheetItem, index) => {
-          const { hanzi, pinyin, tone } = testSheetItem;
-
-          return (
-            <li key={index}>{`${hanzi.sinogram} : ${formatPinyin(
-              pinyin,
-              tone ?? 0
-            )} ${
-              isCorrect({ hanzi, pinyin, tone })
-                ? 'est la bonne réponse ! Bravo !!!'
-                : `est incorrect... C'est ${formatPinyin(
-                    hanzi.pinyin,
-                    hanzi.tone ?? 0
-                  )}`
-            }`}</li>
-          );
-        })}
-      </ul>
+      )} / ${testSheet.length}`}</h2>
+      <table>
+        <thead className="hidden">
+          <tr>
+            <th>Hanzi</th>
+            <th>Réponse</th>
+            <th>Résultat</th>
+            <th>Commentaire</th>
+          </tr>
+        </thead>
+        <tbody>
+          {testSheet.map(({ hanzi, pinyin, tone }) => {
+            const isResponseCorrect = isCorrect({ hanzi, pinyin, tone });
+            return (
+              <tr key={hanzi.id} className="[&>td]:px-3 [&>td]:text-xl">
+                <td className="font-bold">{hanzi.sinogram}</td>
+                <td className="text-center">
+                  {formatPinyin(pinyin, tone ?? 0)}
+                </td>
+                <td>{isResponseCorrect ? '✔️' : '❌'}</td>
+                <td>
+                  {isResponseCorrect ? (
+                    'Bonne réponse !!!'
+                  ) : (
+                    <>
+                      {'Incorrect → '}
+                      <span className="font-bold">
+                        {formatPinyin(hanzi.pinyin, hanzi.tone ?? 0)}
+                      </span>
+                    </>
+                  )}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
       <button
         className="button self-center"
         onClick={() => setCurrentStep(STARTER_STEP)}

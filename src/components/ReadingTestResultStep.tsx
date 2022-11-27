@@ -1,5 +1,4 @@
 import { STARTER_STEP } from '../constants/testSteps';
-import { HanziObject } from '../types/HanziObject';
 import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
 import { formatPinyin } from '../utils/formatPinyin';
 
@@ -22,6 +21,7 @@ export function ReadingTestResultStep({ testSheet, setCurrentStep }: Props) {
         <thead className="hidden">
           <tr>
             <th>Hanzi</th>
+            <th aria-hidden>→</th>
             <th>Réponse</th>
             <th>Résultat</th>
             <th>Commentaire</th>
@@ -31,18 +31,22 @@ export function ReadingTestResultStep({ testSheet, setCurrentStep }: Props) {
           {testSheet.map(({ hanzi, pinyin, tone }) => {
             const isResponseCorrect = isCorrect({ hanzi, pinyin, tone });
             return (
-              <tr key={hanzi.id} className="[&>td]:px-3 [&>td]:text-xl">
-                <td className="font-bold">{hanzi.sinogram}</td>
-                <td className="text-center">
+              <tr key={hanzi.id} className="[&>td]:px-3 xxs:text-xl">
+                <td className=" text-2xl xxs:text-4xl py-3">
+                  {hanzi.sinogram}
+                </td>
+                <td className="text-2xl w-0 hidden xs:table-cell">→</td>
+                <td className="text-center font-bold">
                   {formatPinyin(pinyin, tone ?? 0)}
                 </td>
                 <td>{isResponseCorrect ? '✔️' : '❌'}</td>
                 <td>
                   {isResponseCorrect ? (
-                    'Bonne réponse !!!'
+                    <span className="hidden xs:inline">Bonne réponse !!!</span>
                   ) : (
                     <>
-                      {'Incorrect → '}
+                      <span className="hidden xs:inline mr-1">Incorrect</span>
+                      <span className="mr-1">→</span>
                       <span className="font-bold">
                         {formatPinyin(hanzi.pinyin, hanzi.tone ?? 0)}
                       </span>

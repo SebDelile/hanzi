@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ReadingTestResultStep } from '../components/ReadingTestResultStep';
-import { ReadingTestStarterStep } from '../components/ReadingTestStarterStep';
-import { ReadingTestWorkingStep } from '../components/ReadingTestWorkingStep';
+import { ReadingTestResultStep } from '../components/readingTest/ReadingTestResultStep';
+import { ReadingTestStarterStep } from '../components/readingTest/ReadingTestStarterStep';
+import { ReadingTestWorkingStep } from '../components/readingTest/ReadingTestWorkingStep';
 import {
   STARTER_STEP,
   WORKING_STEP,

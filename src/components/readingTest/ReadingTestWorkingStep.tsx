@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import { STARTER_STEP, RESULT_STEP } from '../constants/testSteps';
-import { InformationIcon } from '../icons/InformationIcon';
-import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
-import { formatPinyin } from '../utils/formatPinyin';
-import { parsePinyinTone } from '../utils/parsePinyinTone';
-import { HanziGrid } from './HanziGrid';
+import { STARTER_STEP, RESULT_STEP } from '../../constants/testSteps';
+import { InformationIcon } from '../../icons/InformationIcon';
+import { readingTestSheetItem } from '../../types/ReadingTestSheetItem';
+import { formatPinyin } from '../../utils/formatPinyin';
+import { parsePinyinTone } from '../../utils/parsePinyinTone';
+import { HanziGrid } from '../HanziGrid';
 
 type Props = {
   testSheet: readingTestSheetItem[];

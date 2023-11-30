@@ -1,6 +1,6 @@
-import { STARTER_STEP } from '../constants/testSteps';
-import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
-import { formatPinyin } from '../utils/formatPinyin';
+import { STARTER_STEP } from '../../constants/testSteps';
+import { readingTestSheetItem } from '../../types/ReadingTestSheetItem';
+import { formatPinyin } from '../../utils/formatPinyin';
 
 type Props = {
   testSheet: readingTestSheetItem[];

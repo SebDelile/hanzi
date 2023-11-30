@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import ReactSelect from 'react-select';
-import { WORKING_STEP } from '../constants/testSteps';
-import { useHanzi } from '../contexts/HanziContext';
-import { HanziObject } from '../types/HanziObject';
-import { readingTestSheetItem } from '../types/ReadingTestSheetItem';
-import { pickRandomHanziSelection } from '../utils/pickRandomHanziSelection';
+import { WORKING_STEP } from '../../constants/testSteps';
+import { useHanzi } from '../../contexts/HanziContext';
+import { HanziObject } from '../../types/HanziObject';
+import { readingTestSheetItem } from '../../types/ReadingTestSheetItem';
+import { pickRandomHanziSelection } from '../../utils/pickRandomHanziSelection';
 
 type Props = {
   setCurrentStep: (step: string) => void;

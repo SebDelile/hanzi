@@ -826,8 +826,8 @@
   },
   {
     "code": "8FDC",
-    "examplePinyin": "XXXXXXXXXX",
-    "exampleSino": "XXXXXXXXXX",
+    "examplePinyin": "ta1 qu4 yuan3",
+    "exampleSino": "他去远",
     "id": 76,
     "key": "辶",
     "pinyin": "yuan",
@@ -837,8 +837,8 @@
   },
   {
     "code": "7530",
-    "examplePinyin": "XXXXXXXXXX",
-    "exampleSino": "XXXXXXXXXX",
+    "examplePinyin": "yi1 kuai4 tian2",
+    "exampleSino": "一块田",
     "id": 77,
     "key": "田",
     "pinyin": "tian",
@@ -848,8 +848,8 @@
   },
   {
     "code": "866B",
-    "examplePinyin": "XXXXXXXXXX",
-    "exampleSino": "XXXXXXXXXX",
+    "examplePinyin": "yi1 zhi1 chong2 zi",
+    "exampleSino": "一只虫子",
     "id": 78,
     "key": "虫",
     "pinyin": "cong",
@@ -870,8 +870,8 @@
   },
   {
     "code": "8FD1",
-    "examplePinyin": "XXXXXXXXXX",
-    "exampleSino": "XXXXXXXXXX",
+    "examplePinyin": "wo3 yao4 zou3 jin4",
+    "exampleSino": "我要走近",
     "id": 80,
     "key": "辶",
     "pinyin": "jin",
@@ -1097,6 +1097,39 @@
     "pinyin": "shei",
     "sinogram": "谁",
     "strokes": "丶フノ丨丶一一一丨一",
+    "tone": 2
+  },
+  {
+    "code": "996D",
+    "examplePinyin": "wo3 chi1 fan4",
+    "exampleSino": "我吃饭",
+    "id": 101,
+    "key": "饣",
+    "pinyin": "fan",
+    "sinogram": "饭",
+    "strokes": "ノ丶一丨一一フ丶丶",
+    "tone": 4
+  },
+  {
+    "code": "665A",
+    "examplePinyin": "wan3 an1",
+    "exampleSino": "晚安",
+    "id": 102,
+    "key": "日",
+    "pinyin": "wan",
+    "sinogram": "晚",
+    "strokes": "ノ一フ丶ノノ丶ノ丶丶",
+    "tone": 3
+  },
+  {
+    "code": "56DE",
+    "examplePinyin": "ni3 hui2 jia1",
+    "exampleSino": "你回家",
+    "id": 103,
+    "key": "囗",
+    "pinyin": "hui",
+    "sinogram": "回",
+    "strokes": "ノ丨一フ丶ノ一",
     "tone": 2
   }
 ]
